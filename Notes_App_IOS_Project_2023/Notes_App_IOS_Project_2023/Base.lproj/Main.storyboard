@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="klt-ah-0g5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="klt-ah-0g5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,13 +11,13 @@
         <!--Notes-->
         <scene sceneID="Mj3-aQ-UEu">
             <objects>
-                <tableViewController id="wH4-ic-0n0" customClass="NoteTableView" customModule="NoteAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wH4-ic-0n0" customClass="NoteTableView" customModule="Notes_App_IOS_Project_2023" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QjS-X9-h31">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCellID" id="tL5-RC-xcx" customClass="NoteCell" customModule="NoteAppCoreData" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCellID" id="tL5-RC-xcx" customClass="NoteCell" customModule="Notes_App_IOS_Project_2023" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tL5-RC-xcx" id="mYl-hd-Rtn">
@@ -51,8 +51,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descLabel" destination="n9i-P9-I7P" id="2v0-cH-9ff"/>
-                                    <outlet property="titleLabel" destination="mrY-0b-lYc" id="rcH-ay-a7H"/>
+                                    <outlet property="descLabel" destination="n9i-P9-I7P" id="HcX-je-C6e"/>
+                                    <outlet property="titleLabel" destination="mrY-0b-lYc" id="tCI-qj-IMj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -100,7 +100,7 @@
         <!--Note Details-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="NoteDetailVC" customModule="NoteAppCoreData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="NoteDetailVC" customModule="Notes_App_IOS_Project_2023" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="z0s-qc-diC" firstAttribute="top" secondItem="Lvu-R3-vUO" secondAttribute="bottom" constant="38" id="AEg-OG-cBl"/>
+                            <constraint firstAttribute="top" secondItem="Lvu-R3-vUO" secondAttribute="bottom" constant="38" id="AEg-OG-cBl"/>
                             <constraint firstItem="PvM-t2-8mg" firstAttribute="centerX" secondItem="cyW-2z-u83" secondAttribute="centerX" id="HOe-W5-Aox"/>
                             <constraint firstItem="cyW-2z-u83" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="JXk-zf-KcO"/>
                             <constraint firstItem="Lvu-R3-vUO" firstAttribute="width" secondItem="cyW-2z-u83" secondAttribute="width" id="KeD-WE-sYE"/>
@@ -145,7 +145,7 @@
                             <constraint firstItem="Lvu-R3-vUO" firstAttribute="centerX" secondItem="PvM-t2-8mg" secondAttribute="centerX" id="V9Y-OF-51F"/>
                             <constraint firstItem="Lvu-R3-vUO" firstAttribute="top" secondItem="PvM-t2-8mg" secondAttribute="bottom" constant="10" id="X4d-C2-cnE"/>
                             <constraint firstItem="L8V-zG-c2k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZGG-1G-GwQ"/>
-                            <constraint firstItem="z0s-qc-diC" firstAttribute="centerX" secondItem="Lvu-R3-vUO" secondAttribute="centerX" id="eBy-iT-njr"/>
+                            <constraint firstAttribute="centerX" secondItem="Lvu-R3-vUO" secondAttribute="centerX" id="eBy-iT-njr"/>
                             <constraint firstItem="cyW-2z-u83" firstAttribute="top" secondItem="L8V-zG-c2k" secondAttribute="bottom" constant="5" id="hXp-hy-HBs"/>
                             <constraint firstItem="L8V-zG-c2k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="krF-yk-Tcn"/>
                             <constraint firstItem="cyW-2z-u83" firstAttribute="centerX" secondItem="L8V-zG-c2k" secondAttribute="centerX" id="utr-5r-aW6"/>
@@ -162,11 +162,14 @@
                                     <action selector="saveAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1pl-8X-947"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="saveAction:" destination="BYZ-38-t0r" id="tBG-5j-3jr"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="descTV" destination="Lvu-R3-vUO" id="nPu-Yp-1Yo"/>
-                        <outlet property="titleTF" destination="cyW-2z-u83" id="IaG-v5-0f0"/>
+                        <outlet property="descTV" destination="Lvu-R3-vUO" id="G2t-H9-f7X"/>
+                        <outlet property="titleTF" destination="cyW-2z-u83" id="oSX-2i-PXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -175,7 +178,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xDb-i0-8vv"/>
+        <segue reference="9Yt-L9-sGy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
@@ -187,9 +190,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
