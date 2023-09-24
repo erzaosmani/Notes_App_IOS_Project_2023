@@ -19,5 +19,10 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 	{
 		return noteList.count
 	}
+
+	override func viewDidAppear(_ animated: Bool)
+	{
+		tableView.reloadData()
+	}
     
 }
