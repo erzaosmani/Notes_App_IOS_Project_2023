@@ -14,6 +14,7 @@
 		D6351F4F2AB233E000C43767 /* Notes_App_IOS_Project_2023.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6351F4D2AB233E000C43767 /* Notes_App_IOS_Project_2023.xcdatamodeld */; };
 		D6351F512AB233E100C43767 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6351F502AB233E100C43767 /* Assets.xcassets */; };
 		D6351F542AB233E100C43767 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6351F522AB233E100C43767 /* LaunchScreen.storyboard */; };
+		D65982422AC0795000E6885F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65982412AC0795000E6885F /* Note.swift */; };
 		D6997EDD2AC060F900F7C91C /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6997EDC2AC060F900F7C91C /* NoteCell.swift */; };
 		D6997EE02AC0611900F7C91C /* NoteTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6997EDF2AC0611900F7C91C /* NoteTableView.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		D6351F502AB233E100C43767 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6351F532AB233E100C43767 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6351F552AB233E100C43767 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D65982412AC0795000E6885F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D6997EDC2AC060F900F7C91C /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		D6997EDF2AC0611900F7C91C /* NoteTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				D6351F4D2AB233E000C43767 /* Notes_App_IOS_Project_2023.xcdatamodeld */,
 				D6997EDC2AC060F900F7C91C /* NoteCell.swift */,
 				D6997EDF2AC0611900F7C91C /* NoteTableView.swift */,
+				D65982412AC0795000E6885F /* Note.swift */,
 			);
 			path = Notes_App_IOS_Project_2023;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				D6351F492AB233E000C43767 /* NoteDetailVC.swift in Sources */,
 				D6997EE02AC0611900F7C91C /* NoteTableView.swift in Sources */,
+				D65982422AC0795000E6885F /* Note.swift in Sources */,
 				D6351F452AB233E000C43767 /* AppDelegate.swift in Sources */,
 				D6997EDD2AC060F900F7C91C /* NoteCell.swift in Sources */,
 				D6351F4F2AB233E000C43767 /* Notes_App_IOS_Project_2023.xcdatamodeld in Sources */,
