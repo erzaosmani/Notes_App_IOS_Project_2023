@@ -82,6 +82,18 @@ class NoteDetailVC: UIViewController {
 				print("Fetch Failed")
 			}
 		}
+
+        let alertController = UIAlertController(title: "Note Saved", message: "Your note has been saved successfully.", preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    alertController.addAction(okAction)
+
+    // Present the alert from the navigation controller if available, or from the current view controller
+    if let navigationController = navigationController {
+        navigationController.present(alertController, animated: true, completion: nil)
+    } else {
+        present(alertController, animated: true, completion: nil)
+    }
+
     }
     
     @IBAction func DeleteNote(_ sender: Any) {
@@ -104,6 +116,22 @@ class NoteDetailVC: UIViewController {
         catch
         {
             print("Fetch Failed")
-        }    }
+        }   
+        let alertController = UIAlertController(title: "Note Deleted", message: "Your note has been deleted.", preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+        // Navigate back after OK is pressed
+        self.navigationController?.popViewController(animated: true)
+    })
+    alertController.addAction(okAction)
+
+    // Present the alert from the navigation controller if available, or from the current view controller
+    if let navigationController = navigationController {
+        navigationController.present(alertController, animated: true, completion: nil)
+    } else {
+        present(alertController, animated: true, completion: nil)
+    }
+         }
+
+
 }
 	
