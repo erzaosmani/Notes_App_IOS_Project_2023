@@ -45,5 +45,26 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 	{
 		tableView.reloadData()
 	}
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+	{
+		self.performSegue(withIdentifier: "editNote", sender: self)
+	}
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+	{
+		if(segue.identifier == "editNote")
+		{
+			let indexPath = tableView.indexPathForSelectedRow!
+			
+			let noteDetail = segue.destination as? NoteDetailVC
+			
+			let selectedNote : Note!
+			selectedNote = noteList()[indexPath.row]
+			noteDetail!.selectedNote = selectedNote
+			
+			tableView.deselectRow(at: indexPath, animated: true)
+		}
+	}
     
 }

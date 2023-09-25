@@ -5,16 +5,26 @@ class NoteDetailVC: UIViewController {
 
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descTV: UITextView!
+
+	var selectedNote: Note? = nil
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+		if(selectedNote != nil)
+		{
+			titleTF.text = selectedNote?.title
+			descTV.text = selectedNote?.desc
+		}
     }
 
 
     @IBAction func saveAction(_ sender: Any) {
 	let appDelegate = UIApplication.shared.delegate as! AppDelegate
+	if(selectedNote == nil)
+		{
+
 	let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
 	let entity = NSEntityDescription.entity(forEntityName: "Note", in: context)
 	let newNote = Note(entity: entity!, insertInto: context)
@@ -31,7 +41,27 @@ class NoteDetailVC: UIViewController {
 		{
 		print("context save error")
 		}
-	    
+		} else{
+			let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+			do {
+				let results:NSArray = try context.fetch(request) as NSArray
+				for result in results
+				{
+					let note = result as! Note
+					if(note == selectedNote)
+					{
+						note.title = titleTF.text
+						note.desc = descTV.text
+						try context.save()
+						navigationController?.popViewController(animated: true)
+					}
+				}
+			}
+			catch
+			{
+				print("Fetch Failed")
+			}
+		}
     }
 }
 	
