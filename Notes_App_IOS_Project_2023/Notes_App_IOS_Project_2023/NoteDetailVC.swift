@@ -5,20 +5,41 @@ class NoteDetailVC: UIViewController {
 
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var descTV: UITextView!
-
+    @IBOutlet weak var deleteBtn: UIButton!
+    
 	var selectedNote: Note? = nil
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-		if(selectedNote != nil)
-		{
-			titleTF.text = selectedNote?.title
-			descTV.text = selectedNote?.desc
-		}
+        
+        // Customize the UITextField and UITextView
+        titleTF.layer.borderWidth = 1.0
+        titleTF.layer.borderColor = UIColor.blue.cgColor
+        titleTF.layer.cornerRadius = 5.0 // Add rounded corners
+        titleTF.backgroundColor = UIColor.white // Set the background color
+        
+        descTV.layer.borderWidth = 1.0
+        descTV.layer.borderColor = UIColor.blue.cgColor
+        descTV.layer.cornerRadius = 5.0
+        descTV.backgroundColor = UIColor.white
+        
+        // Customize the Delete button
+                deleteBtn.layer.borderWidth = 2.0
+                deleteBtn.layer.borderColor = UIColor.blue.cgColor
+                deleteBtn.layer.cornerRadius = 5.0
+                deleteBtn.setTitleColor(UIColor.blue, for: .normal) // Set text color to red
+        deleteBtn.backgroundColor = UIColor.white
+        deleteBtn.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        if selectedNote != nil {
+            titleTF.text = selectedNote?.title
+            descTV.text = selectedNote?.desc
+        }
+        
+        // Set the background color of the whole view to light blue
+        view.backgroundColor = UIColor(red: 173/255, green: 216/255, blue: 230/255, alpha: 1.0)
     }
-
 
     @IBAction func saveAction(_ sender: Any) {
 	let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -62,6 +83,7 @@ class NoteDetailVC: UIViewController {
 			}
 		}
     }
+    
     @IBAction func DeleteNote(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
